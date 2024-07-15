@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: My first step
         run: echo This is the first step of my first job.
+  job_02:
+    runs-on: windows-latest
+    steps:
+      - name: job2
+      run: echo Hi my helloworld
