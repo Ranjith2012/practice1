@@ -1,15 +1,10 @@
-Name: Starte Workflow Demo
+name: example
 
-on: workflow_dispatch
+on: push
 
 jobs:
-  build:
+  job_1:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: demo workflow job
-        run: echo This is a demo start workflow
-  
-
+      - name: My first step
+        run: echo This is the first step of my first job.
