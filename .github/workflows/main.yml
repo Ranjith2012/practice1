@@ -1,19 +1,19 @@
-name: hi
+Name: Starter Workflow Demo
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
-  first_demo_job:
-    name: The first demo job
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Show the demo running
-        env:
-          VAR1: This is
-          VAR2: A Demo of
-          VAR3: GitHub Actions
-          VAR4: Workflow jobs
-        run: |
-          echo $VAR1 $VAR2 $VAR3 $VAR4.
-  
+      - uses: actions/checkout@v3
+
+      - name: demo workflow job
+        run: echo This is a demo start workflow
   
 
